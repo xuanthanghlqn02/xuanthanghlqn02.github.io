@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test Folder</title>
+    <title>Document</title>
+    <style>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  float: left;
+  width: 30.00%;
+  padding: 50px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+    </style>
+
 </head>
+
 <body>
-    <a href="about.html" target="_blank">Click here to go to the about</a>
+    <div class="clearfix">
+        <div class="box" style="background-color:#bbb">
+        <p>Some text inside the box.</p>
+        </div>
+        <div class="box" style="background-color:#ccc">
+        <p>Some text inside the box.</p>
+        </div>
+        <div class="box" style="background-color:#ddd">
+        <p>Some text inside the box.</p>
+        </div>
+      </div>
 </body>
 </html>
