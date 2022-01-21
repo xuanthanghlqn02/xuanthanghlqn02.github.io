@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Folder</title>
     <style>
-        li {
-            /* float: right; */
-            padding-right: 50px;
+        .container {
+            margin: auto;
+            width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
         }
-        ul {
-            float: left;
+
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+        }
+
+        .box {
+            margin: 10px;
+            width: calc((100% - 60px) / 3);
+            
+        }
+
+        .box img {
+ 
+            max-width: 100%;
         }
     </style>
 </head>
 
 <body>
-    <ul style="list-style: none;">
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-        <li>E</li>
-    </ul>
+    <div class="container">
+        <div class="box">
+            <img src="/image-gallery/img/flower1.jpg" alt=""" />
+        </div>
 
+        <div class=" box">
+            <img src="/image-gallery/img/flower1.jpg" alt=""" />
+        </div>
+
+        <div class=" box">
+            <img src="/image-gallery/img/flower1.jpg" alt=""" />
+        </div>
+
+        <div class=" box">
+            <img src="/image-gallery/img/flower1.jpg" alt=""" />
+        </div>
+
+        <div class=" box">
+            <img src="/image-gallery/img/flower1.jpg" alt=""" />
+        </div>
+
+        <div class=" box">
+            <img src="/image-gallery/img/flower1.jpg" alt=""" />
+        </div>
+    </div>
 </body>
+
 </html>
