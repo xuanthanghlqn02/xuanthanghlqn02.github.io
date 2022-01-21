@@ -10,8 +10,9 @@
 
 a img {
     max-width: 230px;
-    /* height: 115px; */
+    height: 115px;
     padding: 5px;
+    object-fit: cover;
     /* max-width: 300px; */
     /* border: 1px solid #ccc; */
 }
