@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* margin-right: 1px; */
+        }
+        .container {
+            /* float: left; */
+            display: flex;
+            /* display: block; */
+        }
+.a {
+    background-color: red;
+    height: 400px;
+    width: 60%;
+    float: left;
+}
+.b {
+    background-color: green;
+    height: 200px;
+    /* width: 40%; */
+/* float: right; */
+}
+.c {
+    background-color: blue;
+    height: 200px;
+    /* width: 40%; */
+    /* clear: left; */
+    /* float: right; */
+}
+.bc {
+    width: 40%;
+    height: 400px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="a"> 
+
+        </div>
+
+        <div class="bc">
+            <div class="b">
+    
+            </div> 
+            <div class="c">
+    
+            </div>
+        </div>
+
+        <div style="clear: both;"></div>
+    </div>
+</body>
+</html>

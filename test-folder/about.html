@@ -5,8 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .div1 {
+            background-color: red;
+            height: 400px;
+            width: 200px;
+            float: left;
+        }
+        .div2 {
+            background-color: yellow;
+            height: 200px;
+            width: 200px;
+            float: left;
+        }
+        .div3 {
+            background-color: black;
+            height: 200px;
+            width: 200px;
+            /* float: left;; */
+        }
+    </style>
 </head>
 <body>
-    ABOUT
+    <div>
+        <div class="div1"">
+heigh = 400px
+width = 200px
+        </div>
+
+        <div style="float: left;">
+            <div class="div2">
+                heigh = 200px
+                width = 200px
+            </div>
+    
+            <div class="div3">
+                heigh = 200px
+                width = 200px
+            </div>
+        </div>
+    </div>
 </body>
 </html>
