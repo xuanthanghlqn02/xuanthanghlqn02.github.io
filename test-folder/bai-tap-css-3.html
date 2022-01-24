@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            /* float: left; */
+            /* width: 1000px; */
+            max-width: 100%;
+            align-items: center;
+            /* justify-content: center; */
+        }
+
+        .a,
+        .b,
+        .c {
+            margin: 0;
+            flex: 1;
+        }
+
+        .a {
+            height: 400px;
+            width: 33.33333%;
+            background-color: red;
+            /* margin-right: 15px; */
+            text-align: center;
+            text-align: unset;
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+
+        .b {
+            height: 400px;
+            width: 33.33333%;
+            background-color: green;
+            /* margin-right: 15px; */
+        }
+
+        .c {
+            height: 400px;
+            width: 33.33333%;
+            background-color: blue;
+        }
+
+        .a span {
+            text-align: center;
+        }
+
+        .a123 {
+            /* height: 200px; */
+            width: 100%;
+            /* height: inherit; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="a">
+            <div class="a123" style="background-color: inherit;">
+                A
+            </div>
+            <!-- <div class="a123" style="background-color: purple;">
+                B
+            </div>
+            <div class="a123" style="background-color: seashell;">
+                C
+            </div> -->
+
+
+        </div>
+
+        <!-- <div class="bc"> -->
+        <div class="b">
+            height
+        </div>
+        <div class="c">
+            height
+        </div>
+        <!-- </div> -->
+</body>
+
+</html>
