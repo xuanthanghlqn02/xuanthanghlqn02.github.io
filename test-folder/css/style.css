@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%;
+    /* margin: auto; */
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.courses {
+    max-width: 1000px;
+    display: flex;
+    margin: auto;
+}
+
+.course {
+    width: 30%;
+    height: 200px;
+    border: 1px solid #ccc;
+}
