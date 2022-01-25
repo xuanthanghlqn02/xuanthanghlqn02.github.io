@@ -26,7 +26,9 @@ a {
     text-align: center;
     font-weight: normal;
     font-size: 18px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 40px;
+
 }
 
 .dad-folder {
@@ -37,12 +39,13 @@ a {
 }
 
 .child-folder {
+    /* background-color: white; */
     width: calc((100%) / 3);
     height: 360px;
     /* border: 1px solid #ccc; */
     padding-left: 10px;
     padding-right:10px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     /* margin: 10px; */
     /* border-radius: 3px;
     overflow: hidden;
@@ -51,6 +54,7 @@ a {
 }
 
 .show {
+    background-color: white;
     border-radius: 3px;
     height: 350px;
     overflow: hidden;
