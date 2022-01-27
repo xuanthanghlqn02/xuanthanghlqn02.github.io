@@ -11,41 +11,151 @@ body {
 }
 
 .register-form {
-    border: 1px solid #ccc;
+    border: 1px solid #bdc3c7;
     border-radius: 8px;
     height: 600px;
     width: 600px;
     margin: auto;
-    background-color: #dff9fb;
+    /* background-color: #dff9fb; */
 }
 
 .title {
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 30px;
-}
-
-.realname, .username {
     margin-left: 30px;
 }
 
-.realname {
+.realname, .email, .phonenumber {
+    margin-left: 30px;
     margin-bottom: 10px;
 }
 
 #fn {
-    width: 220px;
+    width: 180px;
 }
+
 #ln {
     width: 180px;
     margin-left: 6px;
-    /* height: 30px; */
+}
+
+#em, #pn {
+    width: calc(180px + 180px + 10px);
 }
 
 #un {
-    width: calc(220px + 180px + 10px);
+    width: calc(180px + 180px + 10px);
 }
+
+.email {
+        position: relative;
+        /* margin: 10px 2.5px 20px 2.5px; */
+}
+
+input {
+    display: inline-block;
+    border: thin solid #fafafa;
+    border-bottom: solid medium #999;
+    color: #444;
+    background-color: #fafafa;
+    padding: 10px 10px 10px 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+input:focus {
+    border: thin solid #32cd32;
+    border-bottom: solid medium #32cd32;
+    background-color:#fff;
+}
+
+label {
+    color: #999;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 10px;
+    transition: 0.2s;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top: -10px;
+    left: 15px;
+    font-size: small;
+    color: #32cd32;
+    background-color:#fff;
+    padding:0 5px 0 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 input, button {
     /* background-color: #ddd; */
     border: 1px solid #ddd;
     height: 30px;
+    border-radius: 6px;
+    padding-left: 10px;
+    /* border: none; */
 }
+
+/* input:focus {
+    background-color: red;
+    border-color: blue;
+    border: none;
+}
+
+input[type="text"]:focus {  
+                  
+    padding-bottom: 15px;
+    border-color: orangered;
+}  */
+
+/* Đoạn code này định nghĩa các thuộc tính khi nhập text vào ô input, thì placeholder sẽ
+trôi lên top -15px */
+
+/* input:focus::-webkit-input-placeholder {
+    font-size: .75em;
+    position: relative;
+    top: -15px; 
+    transition: 0.2s ease-out;
+} */
+
+/* input::-webkit-input-placeholder {
+    transition: 0.2s ease-in;
+} */
+
+/* input[type="text"]:focus, input[type="password"]:focus {
+    height: 50px;
+    padding-bottom: 0px;
+    transition: 0.2s ease-in;
+} */
+
+/* Đoạn code này định nghĩa các thuộc tính khi nhập text vào ô input, thì placeholder sẽ
+trôi lên top -15px */
+
+
+/* Đoạn code này định nghĩa thuộc tính khi focus vào sẽ có outline được đặt
+lên quan trọng đầu tiên, sau đó sẽ hiện viền hộp theo các tt 2px solid màu #blue */
+
+input:focus { 
+    outline: none !important;
+    /* border-color: #1e73ce; */
+    border: 2px solid #1e73ce;
+    /* box-shadow: 0 0 10px #719ECE; */
+ }
+
+ /* Đoạn code này định nghĩa thuộc tính khi focus vào sẽ có outline được đặt
+lên quan trọng đầu tiên, sau đó sẽ hiện viền hộp theo các tt 2px solid màu #blue */
