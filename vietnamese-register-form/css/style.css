@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 350px;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, 0.39)
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.maudangky {
+    width: 90%;
+    margin: auto;
+}
+
+.hovaten, .ngaysinh, .gioitinh, .diachi, .dienthoai, .email, .matkhau, .xacnhanmatkhau, .dangky {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    display: inline-block;
+    border: 1px solid rgb(168, 168, 168);
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+}
+
+input:focus {
+    background-color:#fff;
+    outline: none !important;
+    border: 2px solid #1e73ce;
+}
+
+label {
+    color: #999;
+    position: absolute;
+    pointer-events: none;
+    left: 10px;
+    top: 6px;
+    transition: 0.2s;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top: -10px;
+    left: 15px;
+    font-size: small;
+    color: #1e73ce;
+    background-color:#fff;
+    padding:0 5px 0 5px;
+}
+
+.dangky {
+    outline: none;
+    background-color: #1e73ce;
+    color: white;
+    height: 30px;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    border: transparent;
+    cursor:pointer;
+}
+
+.dangky:hover {
+    background-color: #045ab6;
+    transition: 0.2s;
+}
