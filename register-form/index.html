@@ -7,40 +7,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create your Account</title>
     <link rel="stylesheet" href="/register-form/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <div class="register-form">
 
-            <h1 class="title">Create your account</h1>
+            <div>
+                <h1 class="title">Create your Logo Account</h1>
 
-            <div class="realname">
-                <input type="text" name="" id="fn" placeholder="First Name">
-                <input type="text" name="" id="ln" placeholder="Last Name">
+                <div class="realname">
+
+                    <div class="firstname">
+                        <input type="text" id="fn" required>
+                        <label>First Name</label>
+                    </div>
+
+                    <div class="lastname">
+                        <input type="text" id="ln" required>
+                        <label class="lastname-lable">Last Name</label>
+                    </div>
+
+                </div>
+
+                <div class="email">
+                    <input type="text" id="em" required>
+                    <label>Email</label>
+                </div>
+
+
+                <div class="phonenumber">
+                    <input type="text" name="" id="pn" required>
+                    <label>Phone Number</label>
+                </div>
+
+
+                <div class="create-password">
+
+                    <div class="password">
+                        <input type="password" id="pw" required>
+                        <label>Password</label>
+                    </div>
+
+                    <div class="confirm">
+                        <input type="password" id="cf" required>
+                        <label class="confirm-label">Confirm</label>
+                    </div>
+
+                </div>
+
+                <div class="create-button">
+
+                    <button type="button" class="create">Create</button>
+
+                </div>
+
             </div>
 
-            <div class="email">
-                <input type="text" required>
-                <label>Email</label>
+            <div class="logo">
+                <img src="/register-form/img/demo-logo.png" alt="demo-logo">
             </div>
-            <!-- <p>You can use letters, numbers & periods</p> -->
-
-            <div class="phonenumber">
-                <input type="text" name="" id="pn" placeholder="Phone Number">
-            </div>
-
-
-            <div class="password">
-
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-
-            </div>
-            <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
-
-            <button class="register-button"></button>
-
         </div>
 
     </div>
