@@ -43,7 +43,13 @@ body {
     border: 1px solid #ccc;
     outline: none;
     border-radius: 5px;
+    transition: 0.2s ease;
 }
+
+.btn__write:hover {
+    background-color: rgba(41, 103, 219, 0.897);
+}
+
 
 .btn__refresh {
     width: 90px;
@@ -56,6 +62,11 @@ body {
     border: 1px solid #ccc;
     outline: none;
     border-radius: 5px;
+    transition: 0.2s ease;
+}
+
+.btn__refresh:hover {
+    background-color: rgb(23, 189, 255);
 }
 
 .ctn {
