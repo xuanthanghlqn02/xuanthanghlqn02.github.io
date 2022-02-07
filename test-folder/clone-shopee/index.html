@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
             <div class="grid">
 
                 <nav class="hd__nb">
-    
+
                     <ul class="hd__nb--list">
                         <li class="hd__nb--item separate">
                             <a class="hd__nb--item-link" href="#">Kênh người bán</a>
@@ -32,23 +33,52 @@
                         <li class="hd__nb--item separate">
                             <a class="hd__nb--item-link" href="#">Trở thành Người bán Shopee</a>
                         </li>
-                        <li class="hd__nb--item separate">
+                        <li class="hd__nb--item separate ctd">
+                             <!-- class viết tắt ctd = click to download -->
                             <a class="hd__nb--item-link" href="#">Tải ứng dụng</a>
+
+                            <div class="qrcode">
+                                
+                                <img src="./img/qr_code.png" alt="QR code" class="qrcode__img">
+
+                                <div class="qrcode__apps">
+                                    <img src="./img/app_store.png" alt="App Store" class="qrcode__apps-as">
+                                    <img src="./img/google-play.png" alt="Google Play" class="qrcode__apps-gg">
+                                </div>
+
+                            </div>
+
                         </li>
                         <li class="hd__nb--item">
-                            Kết nối
+                            Kết nối 
+                            <a class="hd__nb--item-icon" href="#">
+                                <i class="hd__icon fab fa-facebook-f"></i>
+                            </a>
+
+                            <a class="hd__nb--item-icon" href="#">
+                                <i class="hd__icon fab fa-instagram"></i>
+                            </a>
                         </li>
                     </ul>
-    
+
                     <ul class="hd__nb--list">
                         <li class="hd__nb--item">
-                            <a class="hd__nb--item-link" href="#">Thông báo</a>
+                            <a class="hd__nb--item-link" href="#">
+                                <i class="hd__icon far fa-bell"></i>
+                                Thông báo
+                            </a>
                         </li>
                         <li class="hd__nb--item">
-                            <a class="hd__nb--item-link" href="#">Hỗ trợ</a>
+                            <a class="hd__nb--item-link" href="#">
+                                <i class="hd__icon far fa-question-circle"></i>
+                                Hỗ trợ
+                            </a>
                         </li>
                         <li class="hd__nb--item">
-                            <a class="hd__nb--item-link" href="#">Tiếng Việt</a>
+                            <a class="hd__nb--item-link" href="#">
+                                <i class="hd__icon fas fa-globe"></i>
+                                Tiếng Việt
+                            </a>
                         </li>
                         <li class="hd__nb--item separate">
                             <a class="hd__nb--item-link" href="#">Đăng ký</a>
@@ -57,7 +87,7 @@
                             <a class="hd__nb--item-link" href="#">Đăng nhập</a>
                         </li>
                     </ul>
-    
+
                 </nav>
 
             </div>

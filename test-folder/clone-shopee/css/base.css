@@ -30,7 +30,6 @@ html {
     flex-wrap: wrap;
 }
 
-li a{
-    /* text-decoration: none;
-    color: var(--white-color-); */
+.main {
+    height: 2000px;
 }
