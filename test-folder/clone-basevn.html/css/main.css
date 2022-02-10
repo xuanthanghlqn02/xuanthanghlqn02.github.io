@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(90deg, #0f3ca1, #124bab);
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+li {
+    float: left;
+    list-style: none;
+    margin: 20px 14px 0 14px;
+
+}
+
+img {
+    max-width: 70%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.logo {
+    width: 110px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
