@@ -1,0 +1,36 @@
+Product table
+- id (primary key)
+- category_id (foreign key)
+- product_name
+- category
+- price
+- description
+- image
+- quantity
+- Status
+- created_at
+
+Category table
+- id
+- name
+
+User table
+- id
+- name
+- email
+- gender
+- DOB
+- address
+- avatart
+- password
+
+Orders table
+- id (primary key)
+- user_id (foreign key)
+- status
+- create_at
+
+Order_items table
+- order_id
+- product_id
+- quantity

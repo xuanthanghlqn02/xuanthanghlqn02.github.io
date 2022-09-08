@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="vi-VN" xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript>&amp;lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5G7925V"
+    height="0" width="0" style="display:none;visibility:hidden"&amp;gt;&amp;lt;/iframe&amp;gt;
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div id="top">
+    <div class="container" style="position: relative;">
+        <ul class="ul">
+            <li id="list-showroom-top"><a class="loadShowroom" href="javascript:void(0)">Hệ thống showroom &gt;&gt;</a>
+                <div class="list-showroom-top"></div>
+            </li>
+            <li class="border"></li>
+            <li id="support-header"><a class="title-support-top" href="javascript:void(0)" rel="nofollow"><i
+                    class="icons icon-hotro"></i><span class="ping"></span>Bán hàng trực tuyến</a>
+                <div class="support_content">
+
+                    <table cellspacing="0" cellpadding="0" boder-spacing="0px">
+                        <tbody>
+                        <tr>
+                            <td><a href="https://www.phucanh.vn/yeu-cau-bao-gia-ca-nhan.html" target="_blank"><img
+                                    src="https://www.phucanh.vn/media/lib/12.jpg"></a></td>
+                            <td><a href="https://www.phucanh.vn/yeu-cau-bao-gia-doanh-nghiep.html" target="_blank"><img
+                                    src="https://www.phucanh.vn/media/lib/13.jpg"></a></td>
+                            <td><a href="https://www.phucanh.vn/tu-van-tra-gop.html" target="_blank"><img
+                                    src="https://www.phucanh.vn/media/lib/14.jpg"></a></td>
+                            <td><a href="https://www.phucanh.vn/tu-van-san-pham.html" target="_blank"><img
+                                    src="https://www.phucanh.vn/media/lib/15.jpg"></a></td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+
+                    <!-- end bán hàng trực tuyến -->
+
+
+                </div>
+            </li>
+            <!--<li><a href="/page/ban-hang-du-an-doanh-nghiep">Bán hàng dự án & doanh nghiệp</a></li>
+            <li><a href="/page/chinh-sach-mua-tra-gop"><i class="icons icon-tragop"></i>Bán hàng trả góp</a></li> -->
+            <li><a href="/upload/km/index.php?option=list_km"><i class="icons icon-km"></i>Khuyến mãi</a></li>
+            <li><a href="/page/chinh-sach-mua-tra-gop">Mua trả góp</a></li>
+            <li><a style="font-weight: bold;" href="/buildpc"><i class="icons icon-xd"></i>Xây dựng cấu hình</a></li>
+            <!--<li><a href="/index.php?option=tannhiet&view=v2" style="font-weight: bold;"><i class="icons icon-xd"></i>Xây dựng tản nhiệt nước</a></li>-->
+            <li><a href="/tra-cuu-hoa-don-dien-tu.html" rel="nofollow"><i class="icons icon-hd"></i>In hóa đơn điện
+                tử</a></li>
+            <li><a href="http://tracuubaohanh.phucanh.vn/" target="_blank" rel="nofollow">
+                <!--<i class="icons icon-bh"></i>-->Tra cứu bảo hành</a></li>
+            <li><a href="/tin-tuc"><i class="icons icon-news-top"></i>Tin tức</a></li>
+        </ul>
+
+        <ul class="ul right">
+            <li style="margin-right: 6px;"><i class="icons icon-login"></i><a href="/dang-ky" rel="nofollow">Đăng ký</a>
+            </li>
+            <!--<li class="border"></li>-->
+            <li><a href="/dang-nhap" rel="nofollow">| Đăng nhập</a></li>
+        </ul>
+    </div><!--container-->
+</div><!--top-->
+
+<header id="header">
+    <div class="container">
+        <a id="logo" href="/"><img width="208" height="42"
+                                   th:alt="${'CBC'}"
+                                   th:src="@{https://uphinh.vn/images/2022/09/06/52af9baa113da48843ad41236b877427.png}"></a>
+        <div id="search">
+            <form action="/tim" enctype="multipart/form-data" method="get">
+                <input name="q" class="text" id="text_search" type="text" placeholder="Nhập từ khóa tìm kiếm..."
+                       value="" autocomplete="off">
+                <input class="icons" id="submit_search" type="submit" value="Tìm kiếm">
+                <select id="search-type">
+                    <option value="product">Sản phẩm</option>
+                    <option value="article">Bài viết</option>
+                </select>
+            </form>
+            <div class="autocomplete-suggestions"></div>
+        </div><!--search-->
+
+        <div id="hotline-header">Gọi mua hàng: <b>1900 2164</b></div>
+
+        <a id="cart-header" href="/cart" rel="nofollow">
+            <i class="icons icon-cart"></i><span>Giỏ hàng</span><b id="count_shopping_cart_store">0</b>
+        </a><!--cart-header-->
+    </div><!--container-->
+    <!-- Meta Pixel Code -->
+    <!-- <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '674599710538705');
+      fbq('track', 'PageView');
+      </script>
+      <noscript>
+       <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=674599710538705&ev=PageView&noscript=1"/>
+        </noscript> -->
+    <!-- End Meta Pixel Code -->
+</header>
+
+<nav id="nav">
+    <div class="container">
+        <div id="main-menu">
+            <div class="title"><b class="icon-menu"><i></i><i></i><i></i></b><span>Danh mục sản phẩm</span></div>
+            <ul class="ul" style="display: none;">
+                <li class="js-hover-menu" id="pa-228" data-display-node="sub_nav_228" data-tpl="html/menu_cat_228"
+                    data-id="228">
+                    <a class="root" href="/may-tinh-xach-tay-laptop.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-228"></i></span>
+                        <span class="name">Laptop &amp; Linh phụ kiện</span></a>
+                    <div class="sub-menu" id="sub_nav_228" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-751" data-display-node="sub_nav_751" data-tpl="html/menu_cat_751"
+                    data-id="751">
+                    <a class="root" href="/mobile-tablet-phu-kien.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-751"></i></span>
+                        <span class="name">Điện thoại, Tablet &amp; Phụ kiện</span></a>
+                    <div class="sub-menu" id="sub_nav_751" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-1144" data-display-node="sub_nav_1144" data-tpl="html/menu_cat_1144"
+                    data-id="1144">
+                    <a class="root" href="/san-pham-apple.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-1144"></i></span>
+                        <span class="name">Sản phẩm Apple</span></a>
+                    <div class="sub-menu" id="sub_nav_1144" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-752" data-display-node="sub_nav_752" data-tpl="html/menu_cat_752"
+                    data-id="752">
+                    <a class="root" href="/may-tinh-dong-bo.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-752"></i></span>
+                        <span class="name">Máy tính đồng bộ</span></a>
+                    <div class="sub-menu" id="sub_nav_752" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-753" data-display-node="sub_nav_753" data-tpl="html/menu_cat_753"
+                    data-id="753">
+                    <a class="root" href="/server-workstation.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-753"></i></span>
+                        <span class="name">Server &amp; Workstation</span></a>
+                    <div class="sub-menu" id="sub_nav_753" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-1112" data-display-node="sub_nav_1112" data-tpl="html/menu_cat_1112"
+                    data-id="1112">
+                    <a class="root" href="/may-tinh-choi-game-gaming-gear.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-1112"></i></span>
+                        <span class="name">Gaming PC</span></a>
+                    <div class="sub-menu" id="sub_nav_1112" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-242" data-display-node="sub_nav_242" data-tpl="html/menu_cat_242"
+                    data-id="242">
+                    <a class="root" href="/gaming-gear.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-242"></i></span>
+                        <span class="name">Gaming Gear</span></a>
+                    <div class="sub-menu" id="sub_nav_242" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-6" data-display-node="sub_nav_6" data-tpl="html/menu_cat_6"
+                    data-id="6">
+                    <a class="root" href="/linh-kien-pc-lap-rap.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-6"></i></span>
+                        <span class="name">Linh kiện máy tính</span></a>
+                    <div class="sub-menu" id="sub_nav_6" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-188" data-display-node="sub_nav_188" data-tpl="html/menu_cat_188"
+                    data-id="188">
+                    <a class="root" href="/gian-hang-phu-kien.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-188"></i></span>
+                        <span class="name">Phụ kiện máy tính &amp; nghe nhìn</span></a>
+                    <div class="sub-menu" id="sub_nav_188" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-26" data-display-node="sub_nav_26" data-tpl="html/menu_cat_26"
+                    data-id="26">
+                    <a class="root" href="/man-hinh-may-tinh.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-26"></i></span>
+                        <span class="name">Màn hình máy tính</span></a>
+                    <div class="sub-menu" id="sub_nav_26" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-145" data-display-node="sub_nav_145" data-tpl="html/menu_cat_145"
+                    data-id="145">
+                    <a class="root" href="/thiet-bi-van-phong.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-145"></i></span>
+                        <span class="name">Thiết bị văn phòng &amp; Phần mềm</span></a>
+                    <div class="sub-menu" id="sub_nav_145" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-16" data-display-node="sub_nav_16" data-tpl="html/menu_cat_16"
+                    data-id="16">
+                    <a class="root" href="/tb-luu-tru-ky-thuat-so.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-16"></i></span>
+                        <span class="name">Thiết bị lưu trữ &amp; Kỹ thuật số</span></a>
+                    <div class="sub-menu" id="sub_nav_16" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-17" data-display-node="sub_nav_17" data-tpl="html/menu_cat_17"
+                    data-id="17">
+                    <a class="root" href="/thiet-bi-mang.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-17"></i></span>
+                        <span class="name">Thiết bị mạng</span></a>
+                    <div class="sub-menu" id="sub_nav_17" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-35" data-display-node="sub_nav_35" data-tpl="html/menu_cat_35"
+                    data-id="35">
+                    <a class="root" href="/camera-giam-sat.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-35"></i></span>
+                        <span class="name">Camera &amp; SmartHome</span></a>
+                    <div class="sub-menu" id="sub_nav_35" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-333" data-display-node="sub_nav_333" data-tpl="html/menu_cat_333"
+                    data-id="333">
+                    <a class="root" href="/thiet-bi-sieu-thi-may-cham-cong.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-333"></i></span>
+                        <span class="name">Thiết bị siêu thị &amp; PM bán hàng</span></a>
+                    <div class="sub-menu" id="sub_nav_333" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+                <li class="js-hover-menu" id="pa-180" data-display-node="sub_nav_180" data-tpl="html/menu_cat_180"
+                    data-id="180">
+                    <a class="root" href="/thiet-bi-nha-thong-minh-giai-tri.html">
+                        <span class="img"><i class="icons icon-cat-main icon-cat-180"></i></span>
+                        <span class="name">Thiết bị Hội nghị &amp; Trường học</span></a>
+                    <div class="sub-menu" id="sub_nav_180" style="display: none;">
+                        <!--//load content here-->
+                    </div>
+
+                </li>
+            </ul>
+        </div><!--main-menu-->
+
+        <a id="home-fixed" href="/"><i class="icons icon-home"></i></a>
+        <a id="hotline-fixed" href="tel:19002164"><i class="icons icon-hotlinefixed"></i> 1900 2164</a>
+        <ul class="ul list-nav-right">
+            <li><span><i class="icons icon-ck1"></i><a href="https://www.phucanh.vn/page/chinh-sach-kinh-doanh"> 100% chính hãng</a></span>
+            </li>
+            <li><span><i class="icons icon-ck2"></i><a href="https://www.phucanh.vn/page/chinh-sach-kinh-doanh"> Giá ưu đãi nhất</a></span>
+            </li>
+            <li><span><i class="icons icon-ck3"></i><a href="https://www.phucanh.vn/page/van-chuyen-giao-nhan-hang-hoa"> Miễn phí vận chuyển</a></span>
+            </li>
+            <li><span><i class="icons icon-ck4"></i><a href="https://www.phucanh.vn/page/chinh-sach-bao-hanh"> Bảo hành nơi sử dụng</a></span>
+            </li>
+        </ul>
+        <a id="nav-deal" href="/deal">Deal Giờ Vàng (<span id="count-total-deal"></span>)</a>
+    </div><!--container-->
+</nav>
+
+<style>#main-menu:hover ul {
+    display: block !important;
+    top: 37px;
+}</style>
+
+
+<!--  <h1 style="display: none;">Laptop Acer giá rẻ, thiết kế mỏng, nhẹ, Trả góp 0% - Phucanh.vn</h1>-->
+<h2 style="display: none;">Chính hãng - Laptop Acer - Giá tốt</h2>
+<h2 style="display: none;">Giá sốc - Laptop Acer - Giá rẻ</h2>
+<h2 style="display: none;">Khuyến mãi - Laptop Acer - Bảo hành chính hãng</h2>
+
+
+<div class="container">
+    <div id="breadcrumb">
+        <div itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+            <a class="nopad-l" th:href="@{/}" itemprop="url">
+                <span itemprop="title">Trang chủ</span>
+            </a>
+        </div>
+
+
+    </div><!--breadcrumb-->
+
+
+    <div class="banner-pro-list" id="banner-category-left">
+        <div class="owl-carousel">
+
+            <div class="item"><a href="/ad.php?id=2913" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="SIÊU KHUYẾN MÃI - ƯU ĐÃI LỚN DÀNH CHO SINH VIÊN"
+                                                                                            src="https://phucanhcdn.com/media/banner/01_Augabea6e9cc14a21c727d9b91fbb75f1ba.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3315" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="Mùa back to school, Dell tặng quà cool"
+                                                                                            src="https://phucanhcdn.com/media/banner/17_Aug71350424021f65ddd1c771c31bcc9228.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=2956" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="Chương trình Pyaoo"
+                                                                                            src="https://phucanhcdn.com/media/banner/15_Jul239bfcb05d6de0d8de19175f437fd728.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3310" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="LAPTOP DOANH NHÂN - GIÁ ƯU ĐÃI, QUÀ CỰC CHẤT 15-09"
+                                                                                            src="https://phucanhcdn.com/media/banner/13_Aug4ad5e03153f1cd61bb7725a9c10d833f.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3306" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="khuyen mai AMD"
+                                                                                            src="https://phucanhcdn.com/media/banner/09_Aug2267b906c8dabaddd006efff7b035493.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3291" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="Nhẹ thiết kế  - Khỏe Cấu hình"
+                                                                                            src="https://www.phucanh.vn/media/banner/29_Jul6a0b909752b8a69cc4595d3fbf6cff62.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3317" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="NGẬP DEAL CHILL QUÀ"
+                                                                                            src="https://phucanhcdn.com/media/banner/18_Augaae51f33c109b4baf9c72891a0d66e03.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3271" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="MUA LAPTOP GAMING ACER TẶNG BÀN PHÍM CƠ PREDATOR"
+                                                                                            src="https://phucanhcdn.com/media/banner/22_Juncbb853c3fa3c7f25c98663cd95de39af.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3295" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="BACK TO SCHOOL - MÁY CHẤT QUÀ PHẢI CHẤT"
+                                                                                            src="https://www.phucanh.vn/media/banner/01_Aug463c1f7b558365c5b35bf04e2d1a0cdc.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3294" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="TỰU TRƯỜNG ĐỈNH – CHIẾN GAME COOL"
+                                                                                            src="https://www.phucanh.vn/media/banner/01_Augd5a5a10af8a517c08105737c442e86e1.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3105" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="HỌC VÀ LÀM VIỆC TẠI NHÀ"
+                                                                                            src="https://phucanhcdn.com/media/banner/24_Nov9ff0ff89d70e00c86cf0f97d9982e115.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=2949" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt=""
+                                                                                            src="https://phucanhcdn.com/media/banner/06_Julff98f8dd5c1887a10c2ef09d46171469.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3215" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="MỪNG SINH NHẬT - QUÀ CỰC CHẤT"
+                                                                                            src="https://phucanhcdn.com/media/banner/01_Auga2aa69343fbf90a5c5c119c0b644ee3a.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=3300" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="Tựu trường cùng GG Laptop đáng mua nhất"
+                                                                                            src="https://www.phucanh.vn/media/banner/02_Aug6181b0b5ec5a2606adec4fcd8948491a.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=2630" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="MUA LINH KIỆN CÙNG LAPTOP"
+                                                                                            src="https://phucanhcdn.com/media/banner/01_Aug0df84fedb6a584325568edfc6c3e9b8f.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=2577" target="_blank" rel="nofollow"><img width="1416" height="416"
+                                                                                            alt="CHƠI GAME ĐỈNH - RỦNG RỈNH QUÀ"
+                                                                                            src="https://phucanhcdn.com/media/banner/01_Aug34c5768ae5ee4c398efba51208d889ee.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><img width="1416" height="416" alt="CHẾ ĐỘ BẢO HÀNH VIP - 3S1"
+                                   src="https://phucanhcdn.com/media/banner/08_Dec48a1339af0f8849bb91e505b111af1a5.jpg"
+                                   border="0"></div>
+
+        </div>
+    </div><!--banner-left-->
+
+
+    <div class="banner-pro-list" id="banner-category-right">
+        <div class="owl-carousel">
+
+            <div class="item"><a href="/ad.php?id=2504" target="_blank" rel="nofollow"><img width="1425" height="630"
+                                                                                            alt="Miễn phí giao hàng trong phạm vi 5km."
+                                                                                            src="https://phucanhcdn.com/media/banner/03_Augca538c343179bf0fbdfab6cd10469afd.jpg"
+                                                                                            border="0"></a></div>
+
+            <div class="item"><a href="/ad.php?id=1177" target="_blank" rel="nofollow"><img width="475" height="210"
+                                                                                            alt=""
+                                                                                            src="https://phucanhcdn.com/media/banner/banner_83f97f48.png"
+                                                                                            border="0"></a></div>
+
+        </div>
+    </div><!--banner-left-->
+    <div class="space20"></div>
+
+
+    <div id="content-left">
+
+
+        <div id="tab-pro-hot">
+            <div class="title-tab">
+
+
+                <a class="current">MẶT HÀNG LAPTOP</a>
+
+
+            </div>
+            <div class="content-tab category-pro-list">
+                <ul class="product-list owl-carousel owl-theme" id="product-collection"></ul>
+            </div><!--content-tab-->
+            <div class="space10"></div>
+        </div><!--tab-pro-hot-->
+
+
+        <div class="category-pro-list">
+
+            <select class="form-control float-right" onchange="location.href=this.value">
+                <option value="">Sắp xếp theo</option>
+
+
+                <option value="https://www.phucanh.vn/may-tinh-xach-tay-laptop-acer.html?sort=new">Mới nhất</option>
+
+
+                <option value="https://www.phucanh.vn/may-tinh-xach-tay-laptop-acer.html?sort=price-asc">Giá tăng dần
+                </option>
+
+
+                <option value="https://www.phucanh.vn/may-tinh-xach-tay-laptop-acer.html?sort=price-desc">Giá giảm dần
+                </option>
+
+
+                <option value="https://www.phucanh.vn/may-tinh-xach-tay-laptop-acer.html?sort=view">Lượt xem</option>
+
+
+            </select>
+
+            <div class="space10"></div>
+
+            <ul class="ul product-list product-list-not-full">
+
+                <li th:each="product : ${products}" class="p-item-group"
+                    onclick="location.href='/laptop-acer-gaming-aspire-7-a715-42g-r1sb-nh.qaysv.005-ryzen-5-5500u-8gb-256gb-ssd-15.6-quot-fhd-nvidia-gtx1650-4gb-ddr6-win10-black.html'">
+                    <div class="p-container">
+                        <a class="p-img"
+                           th:href="@{/product/{id} (id=${product.id})}">
+                            <img class="lazy loaded" th:alt="${product.name}"
+                                 th:src="${product.image}"
+                                 th:data-src="${product.image}"
+                                 data-was-processed="true">
+                            <i class="icon-apple"></i>
+                        </a>
+                        <h3 class="p-name" th:text="${product.name}">Laptop Acer Gaming Aspire 7 A715 42G R1SB
+                            NH.QAYSV.005 (Ryzen 5 5500U/ 8Gb/
+                            256Gb SSD/ 15.6" FHD/ Nvidia GTX1650 4Gb DDR6/ Win10/Black)</h3>
+
+                        <span class="p-oldprice2" style="width: 100%; display: none;">
+            <i>Giá Khuyến mãi: </i>15.990.000 ₫         </span>
+
+
+                        <span class="p-price2" style="width: 100%; display: none;">
+            <i>Giá VNPAY: </i>     15.790.000 ₫
+        </span>
+
+                        <span class="p-oldprice2" th:text="'Mã sản phẩm: ' + ${product.code}">
+				<i>Giá bán lẻ: </i>16.290.000 ₫            </span>
+
+                        <span class="p-price2" th:text="'Giá sản phẩm: ' +${#numbers.formatCurrency(product.price)}">
+				<i>Giá ưu đãi tháng 8: </i>15.990.000 ₫                           </span>
+
+
+                        <span class="discount">-24%</span>
+
+
+                        <span class="p-bottom">
+		<span style="color: rgb(18, 189, 27);">✔ Có hàng</span>
+						</span>
+
+                        <i class="p-icon_promotion"></i>
+
+
+                    </div>
+
+                    <div class="hover-content-pro">
+                        <a class="hover-name"
+                           href="/laptop-acer-gaming-aspire-7-a715-42g-r1sb-nh.qaysv.005-ryzen-5-5500u-8gb-256gb-ssd-15.6-quot-fhd-nvidia-gtx1650-4gb-ddr6-win10-black.html">Laptop
+                            Acer Gaming Aspire 7 A715 42G R1SB NH.QAYSV.005 (Ryzen 5 5500U/ 8Gb/ 256Gb SSD/ 15.6" FHD/
+                            Nvidia GTX1650 4Gb DDR6/ Win10/Black)</a>
+
+                        <a class="hover-brand" href=""><img alt=""
+                                                            src="https://phucanhcdn.com/media/brand/acer.png"></a>
+
+                        <div class="hori-line"></div>
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td><b style="color: rgb(212, 35, 51);">Giá khuyến mãi: </b></td>
+                                <td>
+                                    <span class="img_price_full">15.990.000</span>
+                                    <span class="hover-vat">
+                        [Đã có VAT] 
+                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><b>Bảo hành:</b></td>
+                                <td>Chính hãng 12 tháng. BH 3S. Đổi mới 30 ngày</td>
+                            </tr>
+                            <tr>
+                                <td><b>Kho hàng:</b></td>
+                                <td>
+                                    Có hàng
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="hori-line"></div>
+                        <div class="hover-offer">
+
+                            <b>Mô tả tóm tắt:</b><br>
+                            - Bộ VXL: Ryzen 5 5500U 2.1Ghz up to 4.0GHz-3Mb
+                            <br>
+                            - Cạc đồ họa: Nvidia GeForce GTX 1650 4GB GDDR6 DDR5
+                            <br>
+                            - Bộ nhớ: 8Gb
+                            <br>
+                            - Ổ cứng/ Ổ đĩa quang: 256GB PCIe NVMe SSD cắm sẵn
+                            <br>
+                            - Màn hình: 15.6Inch Full HD
+                            <br>
+
+                        </div>
+
+                        <div class="hori-line"></div>
+                        <div class="hover-offer">
+                            <b>Khuyến mại:</b><br>
+                            Từ ngày 1/8 đến 31/08/2022, Tặng bộ quà
+                            <br>- Bàn phím cơ Predator trị giá 2.500.000đ
+                            <br>- Chuột Gaming
+                            <br>- Bàn di chuột
+                            <br>- Bộ vệ sinh Laptop
+                            <br>- Balo Gaming Acer Predator SUV2
+                            <br>- Tặng gói bảo trì, bảo dưỡng laptop miễn phí tại Phúc Anh <br>- Giảm 20% ram laptop khi
+                            mua kèm LAPTOP GAMING
+                            <br>- Giảm 10% phụ kiện Lenovo chính hãng
+                            <br>- Giảm 20% cặp or balo thời trang Gearmax, Coolbell, Tucano…
+                            <br>- Giảm 3% ổ cứng di động
+                            <br>- Giảm 10% khi mua phụ kiện Ugreen<br>
+
+                        </div>
+
+                    </div>
+                </li>
+
+
+            </ul>
+
+
+            <div class="clear"></div>
+
+        </div><!--category-pro-list-->
+
+
+    </div><!--content-->
+</div><!--container-->
+
+
+<div class="clear"></div>
+<footer id="footer">
+    <div id="footer-top">
+        <div class="container">
+            <div class="double-line"></div>
+            <table style="width: 100%; margin-top: 10px;">
+                <tbody>
+                <tr>
+                    <!-- <td style="height: 30px;"><b class="red font16">FACEBOOK</b></td>-->
+                    <!--<td><b class="red font16">YOUTUBE</b>
+            <a href="https://www.youtube.com/channel/UCs78-o0g93nYfHKVy0AJkWA" target="_blank"><i class="icons icon-subscrible"></i></a>
+          </td>-->
+                    <td><b class="red font16">TỔNG ĐÀI HỖ TRỢ</b></td>
+                    <!--  <td></td>-->
+                </tr>
+                <tr>
+                    <!-- <td style="padding-right: 20px; width: 500px;" class="td-fanpage">
+                         <iframe src="https://www.facebook.com/plugins/likebox.php?href=https://www.facebook.com/phucanhsmartworld/;width=450&amp;height=250&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:200px; width:100%; padding-bottom:10px;" allowtransparency="true"></iframe>
+                         <div
+                             class="fb-page"
+                             data-href="https://www.facebook.com/phucanhsmartworld/"
+                             data-tabs=""
+                             data-width="500"
+                             data-height="215"
+                             data-small-header="false"
+                             data-adapt-container-width="true"
+                             data-hide-cover="false"
+                             data-show-facepile="true"
+                         >
+                             <blockquote cite="https://www.facebook.com/phucanhsmartworld/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/phucanhsmartworld/">Phúc Anh Smart World</a></blockquote>
+                         </div>
+                     </td>-->
+                    <!--<td style="padding-right:20px;" class="td-youtube">
+            <iframe width="100%" height="215" src="https://www.youtube.com/embed/41RidUeotRo" frameborder="0" allowfullscreen></iframe>
+          </td>-->
+                    <td class="td-support">
+                        <div style="padding: 3px; border: 1px solid rgb(221, 221, 221); border-image: none; height: 130px;">
+                            <table id="tbl-hotline-footer">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <p><span class="title"><b>Bán hàng trực tuyến:</b></span> <b class="red">1900
+                                            2164</b> - Nhánh số 1 (8h00 - 21h00)</p>
+                                        <p><span class="title"><b>Bán hàng dự án và doanh nghiệp:</b></span> <b
+                                                class="red">1900 2164</b> - Nhánh số 2 (8h00 - 17h00, Thứ 2 - Thứ 7)</p>
+                                    </td>
+                                    <td>
+                                        <p><span class="title"><b>Tư vấn mua trả góp:</b></span><b class="red">1900
+                                            2164</b> - Nhánh số 3 (8h00 - 20h30)</p>
+                                        <p style="margin-bottom: 0px;"><span
+                                                class="title"><b>Hỗ trợ kỹ thuật:</b> </span><b class="red">1900
+                                            2165</b> (8h15 - 20h30)</p>
+                                    </td>
+                                    <td>
+
+                                        <p><span class="title"><b>Tra cứu bảo hành- Yêu cầu dịch vụ:</b></span><b
+                                                class="red">1900 2173</b> (8h15 - 17h15, Thứ 2 - Thứ 7)</p>
+                                        <p><span class="title"><b>Góp ý, khiếu nại:</b> </span><b class="red">1900
+                                            2174</b> (8h15 - 20h30)</p>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <!--     <tr>
+          <td colspan="4">
+            <div id="partner-footer">
+              <b class="red font16">ĐỐI TÁC KINH DOANH: </b>
+                          </div>
+          </td>
+        </tr> -->
+                </tbody>
+            </table>
+            <div class="double-line"></div>
+        </div>
+        <!--container-->
+    </div>
+    <!--footer-top-->
+    <div id="footer-bottom">
+        <div class="container" id="chinhsach-footer">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="list_info">
+                            <b class="font16 title">Thông tin công ty</b>
+                            <a href="/gioi-thieu" rel="nofollow">Giới thiệu công ty</a>
+                            <a href="/thong-tin-lien-he-moi.html" rel="nofollow">Thông tin liên hệ</a>
+                            <a href="/tuyen-dung-phuc-anh.html" rel="nofollow">Thông tin tuyển dụng</a>
+                            <a href="/dieu-khoan-giao-dich.html" rel="nofollow">Điều khoản giao dịch</a>
+                            <a href="/chinh-sach-bao-mat-thong-tin-khach-hang.html" rel="nofollow">Chính sách bảo mật
+                                thông tin khách hàng</a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="list_info">
+                            <b class="font16 title">Quy định &amp; chính sách</b>
+                            <a href="/page/chinh-sach-kinh-doanh" rel="nofollow">Chính sách kinh doanh</a>
+                            <a href="/chinh-sach-cho-khach-hang-doanh-nghiep-2020.html" rel="nofollow">Ưu đãi cho khách
+                                hàng doanh nghiệp</a>
+                            <a href="/page/chinh-sach-game-net" rel="nofollow">Ưu đãi cho khách hàng Game-Net</a>
+                            <a href="/page/van-chuyen-giao-nhan-hang-hoa" rel="nofollow">Chính sách vận chuyển và giao
+                                nhận</a>
+                            <a href="/page/chinh-sach-bao-hanh" rel="nofollow">Chính sách bảo hành</a>
+                            <a href="/page/chinh-sach-doi-tra-san-pham" rel="nofollow">Chính sách đổi trả sản
+                                phẩm</a>
+
+                            <!--  <a href="/page/bao-mat-thong-tin" rel="nofollow">Chính sách bảo mật thông tin</a>-->
+                        </div>
+                    </td>
+                    <td>
+                        <div class="list_info">
+                            <b class="font16 title">Hỗ trợ khách hàng</b>
+                            <a href="/page/huong-dan-mua-hang-online" rel="nofollow">Hướng dẫn mua hàng online</a>
+                            <a href="/chinh-sach-mua-tra-gop.html">Hướng dẫn mua hàng trả góp</a>
+                            <a href="/page/phuong-thuc-thanh-toan" rel="nofollow">Phương thức thanh toán</a>
+
+                            <div class="new-sub-cat">
+                                <div class="position-relative d-inline-block">
+                                    <a class="cat2 d-inline-block" href="javascript:void(0)">Yêu cầu báo giá&nbsp;&nbsp;<i
+                                            class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+                                    <div class="list-sub-hover">
+                                        <a class="cat3" href="/yeu-cau-bao-gia-ca-nhan.html" target="blank">Báo giá
+                                            cá nhân</a>
+                                        <a class="cat3" href="/yeu-cau-bao-gia-doanh-nghiep.html" target="blank">Báo
+                                            giá doanh nghiệp</a>
+                                        <a class="cat3" href="/tu-van-tra-gop.html" target="blank">Tư vấn trả góp</a>
+                                        <a class="cat3" href="/tu-van-san-pham.html" target="blank">Tư vấn sản
+                                            phẩm</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="new-sub-cat">
+                     <div class="position-relative d-inline-block">
+                     <a href="javascript:void(0)" class="cat2 d-inline-block">Liên hệ kỹ thuật&nbsp;&nbsp;<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+                     <div class="list-sub-hover">
+                       <a href="/yeu-cau-bao-hanh.html" target="_blank">Trung tâm bảo hành</a>
+                       <a href="/yeu-cau-ky-thuat-15-xa-dan.html" class="cat3" target="blank">Showroom 15 Xã Đàn</a>
+                       <a href="#" class="cat3" target="blank">Showroom 89 Lê Duẩn</a>
+                         <a href="#" class="cat3" target="blank">Showroom 152 Trần Duy Hưng</a>
+                       <a href="#" class="cat3" target="blank">Showroom 134 Thái Hà</a>
+                       <a href="#" class="cat3" target="blank">Showroom 63 Nguyễn Hoàng</a>
+                       <a href="#" class="cat3" target="blank">Showroom 141 Phạm Văn Đồng</a>
+                     </div>
+                   </div>
+                   </div>-->
+                            <!--<a href="/upload/km/index.php?option=yeu-cau-bao-hanh" target="_blank">Liên hệ kỹ thuật</a>
+                           <!--<a href="/page/tu-van-ky-thuat" rel="nofollow">Hỗ trợ kỹ thuật</a>-->
+                            <a href="/yeu-cau-bao-hanh.html" target="_blank">Liên hệ kỹ thuật</a>
+                            <a href="/y-kien-khach-hang.html" rel="follow">Gửi góp ý, khiếu nại</a>
+
+                            <!--<a href="?show_version=mobile" rel="nofollow">Phiên bản Mobile</a>-->
+                        </div>
+                    </td>
+                    <!-- <td id="list-payment-footer">
+          <b class="font16 title red" style="margin-bottom:15px; display:block;">Hình thức thanh toán</b>
+          <a href="" class="icons icon-pay-tienmat"></a>
+          <a href="" class="icons icon-pay-visa"></a>
+          <div class="clear"></div>
+          <a href="" class="icons icon-pay-chuyenkhoan"></a>
+          <a href="" class="icons icon-pay-master"></a>
+          <div class="clear"></div>
+          <a href="" class="icons icon-pay-banking"></a>
+          <a href="" class="">
+            <img src="https://www.phucanh.vn/template/2017/images/QR-code.png" alt="Mã QR"></a>
+        <a href="//www.dmca.com/Protection/Status.aspx?ID=65741f99-8b9a-41b7-b926-496921dc667e" title="DMCA.com Protection Status" class="dmca-badge" target="_blank"> <img src="//images.dmca.com/Badges/dmca_protected_sml_120r.png?ID=65741f99-8b9a-41b7-b926-496921dc667e" alt="DMCA.com Protection Status"></a> <script src="//images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+          
+        </td>-->
+                    <td>
+                        <div class="center bocongthuong"
+                             style="padding-top: 25px; margin-top: -30px; margin-bottom: 20px;">
+                            <a title="Đã đăng ký bộ công thương"
+                               href="http://online.gov.vn/Home/WebDetails/3453?AspxAutoDetectCookieSupport=1"
+                               target="_blank" rel="nofollow"><img width="160" height="60"
+                                                                   src="https://www.phucanh.vn/template/2017/images/dathongbao.png"></a>
+                            <a title="DMCA.com Protection Status" class="dmca-badge"
+                               href="https://www.dmca.com/Protection/Status.aspx?id=d2e94503-0a12-4acf-ab19-8fb8c9e8ef07&amp;refurl=https%3a%2f%2fwww.phucanh.vn%2f&amp;rlo=true"
+                               target="_blank" rel="nofollow"><img width="160" height="60"
+                                                                   src="https://www.phucanh.vn/template/2017/images/dmca-phucanh.png"></a>
+                            <!--<script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script> -->
+                            <div class="space10"></div>
+                            <div id="news_letter">
+                                <p><span class="btn btn-blue">Đăng ký</span> nhận tin KHUYẾN MÃI</p>
+                                <input id="email_newsletter" type="text" placeholder="Nhập địa chỉ email của bạn">
+                                <a class="btn button" href="javascript:subscribe_newsletter()">GỬI NGAY</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--container-->
+    </div>
+    <!--footer-bottom-->
+</footer>
+
+
+<div class="container">
+    <table class="tbl-common">
+        <tbody>
+        <tr>
+            <td class="nopad-r" style="width: 25%;">
+                <b class="font18 uppercase" style="font-size: 16px;">Phòng bán hàng trực tuyến</b>
+                Địa chỉ: Tầng 3, 89 Lê Duẩn, Hoàn Kiếm, Hà Nội.<br>
+                Điện thoại: 1900 2164 (ext 1) <br>
+                Email: <a class="blue" href="mailto:banhangonline@phucanh.com.vn">banhangonline@phucanh.com.vn</a><br>
+                <a class="yellow"
+                   href="https://www.google.com/maps/search/ph%C3%BAc+anh+134+th%C3%A1i+h%C3%A0/@21.0214574,105.7865094,14z/data=!3m1!4b1?hl=vi-VN"
+                   target="_blank" rel="nofollow"><b>[Bản đồ đường đi]</b></a>
+            </td>
+            <td class="nopad-r" style="width: 25%;">
+                <b class="font18 uppercase" style="font-size: 16px;">Showroom Phúc anh 15 xã đàn</b>
+                Địa chỉ: 15 Xã Đàn, Đống Đa, Hà Nội.<br>
+                Điện thoại: (024) 3968 9966 (ext 1)<br>
+                Email: <a class="blue" href="mailto:phucanh.xadan@phucanh.com.vn">phucanh.xadan@phucanh.com.vn</a><br>
+                Giờ mở cửa từ 08h00 đến 21h00<br>
+                <a class="yellow" href="https://goo.gl/3dNNLe" target="_blank" rel="nofollow"><b>[Bản đồ đường
+                    đi]</b></a>
+            </td>
+            <td class="nopad-r" style="width: 25%;">
+                <b class="font18 uppercase" style="font-size: 16px;">showroom PHÚC ANH 152 TRẦN DUY HƯNG</b>
+                Địa chỉ: 152-154 Trần Duy Hưng, Cầu Giấy, Hà Nội.<br>
+                Điện thoại: (024) 3968 9966 (ext 2)<br>
+                Email: <a class="blue" href="mailto:phucanh.tranduyhung@phucanh.com.vn">phucanh.tranduyhung@phucanh.com.vn</a><br>
+                Giờ mở cửa từ 08h00 đến 21h00<br>
+                <a class="yellow" href="https://goo.gl/nVrqhd" target="_blank" rel="nofollow"><b>[Bản đồ đường
+                    đi]</b></a>
+            </td>
+            <td class="nopad-r" style="width: 25%;">
+                <b class="font18 uppercase" style="font-size: 16px;">showroom PHÚC ANH 63 NGUYỄN HOÀNG</b>
+                Địa chỉ: 63 Nguyễn Hoàng, Nam Từ Liêm, Hà Nội.<br>
+                Điện thoại:(024) 3968 9966 (ext 4)<br>
+                Email: <a class="blue" href="mailto:phucanh.nguyenhoang@phucanh.com.vn">phucanh.nguyenhoang@phucanh.com.vn</a><br>
+                Giờ mở cửa từ 08h00 đến 21h00<br>
+                <a class="yellow" href="https://goo.gl/5ptYEk" target="_blank" rel="nofollow"><b>[Bản đồ đường
+                    đi]</b></a>
+            </td>
+        </tr>
+        <tr>
+            <td class="nopad-r">
+                <b class="font18 uppercase" style="font-size: 16px;">PHÒNG DỰ ÁN VÀ KHÁCH HÀNG DOANH NGHIỆP</b>
+                Địa chỉ: Tầng 5,134 Thái Hà, Đống Đa, Hà Nội.<br>
+                Điện thoại: 1900 2164 (ext 2)<br>
+                Email: <a class="blue" href="mailto:kdda@phucanh.com.vn">kdda@phucanh.com.vn</a><br>
+
+                <a class="yellow"
+                   href="https://www.google.com/maps/search/ph%C3%BAc+anh+134+th%C3%A1i+h%C3%A0/@21.0214574,105.7865094,14z/data=!3m1!4b1?hl=vi-VN"
+                   target="_blank" rel="nofollow"><b>[Bản đồ đường đi]</b></a>
+            </td>
+            <td class="nopad-r">
+                <b class="font18 uppercase" style="font-size: 16px;">SHOWROOM Phúc Anh 89 Lê Duẩn</b>
+                Địa chỉ: 89 Lê Duẩn, Cửa Nam, Hoàn Kiếm, Hà Nội.<br>
+                Điện thoại: (024) 3968 9966 (ext 6)<br>
+                Email: <a class="blue" href="mailto:phucanh.leduan@phucanh.com.vn">phucanh.leduan@phucanh.com.vn</a><br>
+                Giờ mở cửa từ 08h00 đến 21h00<br>
+                <a class="yellow" href="https://goo.gl/maps/QCLdxxPuGjgdMz2e9" target="_blank" rel="nofollow"><b>[Bản đồ
+                    đường đi]</b></a>
+            </td>
+            <td class="nopad-r">
+                <b class="font18 uppercase" style="font-size: 16px;">showroom PHÚC ANH 134 THÁI HÀ</b>
+                Địa chỉ: 134 Thái Hà, Đống Đa, Hà Nội.<br>
+                Điện thoại: (024) 3968 9966 (ext 3)<br>
+                Email: <a class="blue" href="mailto:phucanh.thaiha@phucanh.com.vn">phucanh.thaiha@phucanh.com.vn</a><br>
+                Giờ mở cửa từ 08h đến 21h00<br>
+                <a class="yellow"
+                   href="https://www.google.com/maps/search/ph%C3%BAc+anh+134+th%C3%A1i+h%C3%A0/@21.0214574,105.7865094,14z/data=!3m1!4b1?hl=vi-VN"
+                   target="_blank" rel="nofollow"><b>[Bản đồ đường đi]</b></a>
+            </td>
+            <td class="nopad-r">
+                <b class="font18 uppercase" style="font-size: 16px;">Showroom Phúc anh 141 phạm văn đồng</b>
+                Địa chỉ: 141-143 Phạm Văn Đồng, Cầu Giấy, Hà Nội.<br>
+                Điện thoại: (024) 3968 9966 (ext 5)<br>
+                Email: <a class="blue" href="mailto:phucanh.phamvandong@phucanh.com.vn">phucanh.phamvandong@phucanh.com.vn</a><br>
+                Giờ mở cửa từ 08h00 đến 21h00<br>
+                <a class="yellow" href="https://bit.ly/2YHcrqH" target="_blank" rel="nofollow"><b>[Bản đồ đường đi]</b></a>
+            </td>
+
+            <!--<td class="nopad-r">
+    <b class="font18 red uppercase">showroom PHÚC ANH 150 Nguyễn Văn Cừ</b>
+    Địa chỉ: 150 Nguyễn Văn Cừ, Long Biên, Hà Nội.<br/>
+    Điện thoại:  (024) 39689966<br/>
+    Email: <a href="mailto:phucanh.nguyenvancu@phucanh.com.vn" class="blue">phucanh.nguyenvancu@phucanh.com.vn</a><br/>
+    Giờ mở cửa từ 08h15 đến 21h00<br/>
+    <a href="https://goo.gl/6ye3e4" target="_blank" class="yellow" rel="nofollow"><b>[Bản đồ đường đi]</b></a>
+  </td>-->
+        </tr>
+        <tr>
+            <td class="nopad-r">
+                <b class="font18 uppercase" style="font-size: 16px;">PHÒNG KINH DOANH PHÂN PHỐI</b>
+                Địa chỉ: Tầng 5, 134 Thái Hà, Đống Đa, Hà Nội.<br>
+                Điện thoại: 097 322 7711 <br>
+                Email: <a class="blue" href="mailto:kdpp@phucanh.com.vn">kdpp@phucanh.com.vn</a><br>
+
+                <a class="yellow"
+                   href="https://www.google.com/maps/search/ph%C3%BAc+anh+134+th%C3%A1i+h%C3%A0/@21.0214574,105.7865094,14z/data=!3m1!4b1?hl=vi-VN"
+                   target="_blank" rel="nofollow"><b>[Bản đồ đường đi]</b></a>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
